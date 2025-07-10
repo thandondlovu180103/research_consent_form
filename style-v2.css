@@ -1,0 +1,183 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    background-image: url(images/backr.jpg);
+    background-size: 690px;
+    color: black;
+}
+
+/*================== HEADER ==================*/
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 500px;
+    width: 100%;
+    height: 80px;
+    background-color: forestgreen;
+    background-repeat: repeat-x;
+}
+
+.logo {
+    height: 60px;
+    margin-left: 20px;
+    float: left;
+    padding-top: 10px;
+    width: 200px;
+}
+
+.header h1 {
+    margin-left: 100px; /* So it doesn’t overlap the logo */
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+/*================== MAIN-HOME ==================*/
+
+.main-home{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+/*================== BOTTOM-TABS ==================*/
+
+#tabs-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 40px;
+    background-color: forestgreen;
+}
+
+#tabs-bottom a{
+    float: left;
+    display: block;
+    width: 50%;
+    height: 35px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 12px;
+}
+
+#tabs-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons if more than one */
+    margin-top: 30px;
+}
+/*================== NEXT PAGE ==================*/
+#next-page{
+    text-decoration: none;
+    
+}
+
+.submit-btn{
+    text-decoration: none;
+    padding: 5px;
+    background-color: forestgreen;
+}
+.submit-btn:hover{
+    background-color: pink;
+    color: cornflowerblue;
+}
+
+#main{
+    margin-top: 119px;
+    background-repeat: repeat-y;
+}
+
+#content{
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+/*================== INFO-BOX ==================*/
+
+a.info-box{
+    text-decoration: none;
+    background: rgba(255, 255, 255, .8);
+    width: 90%;
+    height: 90px;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 1px;
+}
+
+.info-box img{
+    height: 70px;
+    margin: 10px;
+    float: left;
+}
+
+.info-box h3{
+    padding: 0;
+    margin-bottom: 0;
+    width: 90%;
+    color: #572800;
+}
+
+.info-box p{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    color: #131313;
+}
+
+.info-box img.right{
+    float: right;
+    margin-top: 25px;
+    height: 40px;
+}
+
+/*================== INFO BOX FULL ==================*/
+
+#info-box-full{
+    background: rgba(255, 255, 255, .8);
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 12px;
+    padding: 10px;
+}
+
+#info-box-full img{
+    width: 100%;
+}
+
+#info-box-full h3{
+    text-align: center;
+}
+
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 8px;
+    accent-color: forestgreen;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: darkgreen;
+}

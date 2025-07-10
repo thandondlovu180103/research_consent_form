@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="style-v2.css">
+    </head>
+    <body>
+        <div class="header">
+            <img src="images/nmu-logo.jpg" alt="NMU Logo" class="logo">
+        </div>
+        <div id="main">
+            <div id="content">
+                <div id="info-box-full">
+                    <div id="link">
+        <div class="next-page">
+        <label for="next-page">Have You Read and Understood the Information Letter?</label>
+        <select id="next-page">
+            <option value="">Choose answer:</option>
+            <option value="yes">✅ Yes, I have read and understood the information letter.</option>
+            <option value="no">❌ No, I have not read or do not understand the information letter.</option>
+        </select>
+            
+        <p><a href="#" class="submit-btn" onclick="btnPressed()">Submit.</a></p>
+            </div>
+            
+        <!-- Message display area -->
+        <p id="message"></p>
+
+        <script>
+            function btnPressed(){
+                var answerSelected = document.getElementById("next-page").value;
+                var messageEl = document.getElementById("message");
+
+                switch(answerSelected){
+                    case "yes":
+                        window.location.href = "yes.html";
+                        break;
+                    case "no":
+                        window.location.href = "no.html";
+                        break;
+                }
+            }
+        </script>
+                        
+            <div id="tabs-bottom">
+                <div id="single-tab">
+                    <a href="yes.html" class="back-btn">BACK</a>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
