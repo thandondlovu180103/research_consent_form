@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-v2.css">
+</head>
+
+<body>
+    <div class="header">
+            <img src="images/nmu-logo.jpg" alt="NMU Logo" class="logo">
+        </div>
+    <div id="main">
+        <div id="content">
+            <div id="info-box-full">
+                <h1>PARTICIPANT INFORMED CONSENT</h1>
+
+                <p>I have read the letter of participation attached and acknowledge the purpose of this study and that it aims to examine the infection control practices of diagnostic radiographers during projectional chest radiographic examinations on neonates in the neonatal intensive care unit (NICU) at selected private and public hospitals in the Nelson Mandela Bay Health District. </p>
+                <p>Please confirm each of the following by ticking the boxes:</p>
+
+                <form id="consentForm">
+                    <label><input type="checkbox" name="consent" /> The choice to participate in this study is of my own free will.</label><br/>
+                    <label><input type="checkbox" name="consent" /> I can withdraw from the questionnaire whenever I choose. Incomplete questionnaires will be discarded.</label><br/>
+                    <label><input type="checkbox" name="consent" /> My identity and personal information will be kept completely confidential.</label><br/>
+                    <label><input type="checkbox" name="consent" /> I can complete the questionnaire at any point within the four-week data collection period.</label><br/>
+                    <label><input type="checkbox" name="consent" /> I will receive three reminders during the data collection period.</label><br/>
+                    <label><input type="checkbox" name="consent" /> I am able to contact any of the researchers regarding any concerns.</label><br/>
+                    <label><input type="checkbox" name="consent" /> I am not receiving any remuneration for participating.</label><br/>
+                    <label><input type="checkbox" name="consent" /> I will not disclose any information received from this questionnaire.</label><br/>
+                    <label><input type="checkbox" name="consent" /> Contact details of where to submit complaints were provided.</label><br/><br/>
+
+                    <p>In selecting “Yes”, I agree to be enrolled and participate in this study. In selecting “No”, I acknowledge that I will be excluded.</p>
+
+                    <button type="button" onclick="submitConsent(true)">Yes, I consent</button>
+                    <button type="button" onclick="submitConsent(false)">No, I do not consent</button>
+
+                    <p id="warning" style="color: red;"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitConsent(consentGiven) {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const allChecked = Array.from(checkboxes).every(box => box.checked);
+            const warning = document.getElementById("warning");
+
+            if (consentGiven) {
+                if (allChecked) {
+                    window.location.href = "giveconsent.html";
+                } else {
+                    warning.textContent = "Please tick all consent statements before continuing.";
+                }
+            } else {
+                window.location.href = "noconsent.html";
+            }
+        }
+    </script>
+</body>
+</html>
